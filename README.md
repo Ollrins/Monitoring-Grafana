@@ -7,18 +7,18 @@
 
 ## Задание 2
 
-### 1. Утилизация CPU (в процентах, 100-idle)
+#### 1. Утилизация CPU (в процентах, 100-idle)
 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
 
-### 2. CPU Load Average (1/5/15 минут)
+#### 2. CPU Load Average (1/5/15 минут)
 node_load1
 node_load5
 node_load15
 
-### 3. Количество свободной оперативной памяти
+#### 3. Количество свободной оперативной памяти
 node_memory_MemFree_bytes
 
-### 4. Количество места на файловой системе (в процентах)
+#### 4. Количество места на файловой системе (в процентах)
 (node_filesystem_avail_bytes{mountpoint="/etc/hostname"} / node_filesystem_size_bytes{mountpoint="/etc/hostname"}) * 100
 
 <p align="center">
@@ -36,7 +36,7 @@ node_memory_MemFree_bytes
 
 </p>
  Сводная таблица алертов Node Exporter Monitoring
-
+<br>
 | # | Alert Name | Query | Condition | For | Severity |
 |---|------------|-------|-----------|-----|----------|
 | 1 | High CPU Usage Alert | `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` | > 90 | 5m | Warning |
