@@ -8,19 +8,23 @@
 ## Задание 2
 
 #### 1. Утилизация CPU (в процентах, 100-idle)
+```bash
 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
-
+```
 #### 2. CPU Load Average (1/5/15 минут)
+```bash
 node_load1
 node_load5
 node_load15
-
+```
 #### 3. Количество свободной оперативной памяти
+```bash
 node_memory_MemFree_bytes
-
+```
 #### 4. Количество места на файловой системе (в процентах)
+```bash
 (node_filesystem_avail_bytes{mountpoint="/etc/hostname"} / node_filesystem_size_bytes{mountpoint="/etc/hostname"}) * 100
-
+```
 <p align="center">
   <img src="src/S2.png" width="900"/>
   <br>
