@@ -36,7 +36,7 @@ node_memory_MemFree_bytes
 
 </p>
  Сводная таблица алертов Node Exporter Monitoring <br>
-
+<p></p>
 
 | # | Alert Name | Query | Condition | For | Severity |
 |---|------------|-------|-----------|-----|----------|
