@@ -35,8 +35,9 @@ node_memory_MemFree_bytes
   <br>
 
 </p>
- Сводная таблица алертов Node Exporter Monitoring
-<br>
+ Сводная таблица алертов Node Exporter Monitoring <br>
+
+
 | # | Alert Name | Query | Condition | For | Severity |
 |---|------------|-------|-----------|-----|----------|
 | 1 | High CPU Usage Alert | `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` | > 90 | 5m | Warning |
